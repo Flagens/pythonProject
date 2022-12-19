@@ -10,7 +10,7 @@ def bitcoinApi(URL):
     response_info = json.loads(response)
     price = response_info['bpi']['USD']['rate_float']
     print(f"Aktualna cena Bitcoina: {price} USD")
-    time.sleep(5)
+    time.sleep(1)
 
 
 
@@ -18,7 +18,7 @@ def currentTime():
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("Current Time =", current_time)
-    time.sleep(5)
+    time.sleep(10)
 
 
 thread1 = threading.Thread(target=bitcoinApi("https://api.coindesk.com/v1/bpi/currentprice.json"))
